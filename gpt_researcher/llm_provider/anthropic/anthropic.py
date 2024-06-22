@@ -36,7 +36,7 @@ class AnthropicProvider:
         llm = ChatAnthropic(
             model=self.model,
             temperature=self.temperature,
-            max_tokens=self.max_tokens,
+            max_tokens_to_sample=1024, # There could be any integer larger than 1024
             api_key=self.api_key
         )
 
